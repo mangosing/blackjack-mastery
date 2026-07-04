@@ -12,8 +12,7 @@
     "format": "turbo format",
     "clean": "turbo clean",
     "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "turbo format:check"
   },
   "keywords": [],
   "author": "",

@@ -1,73 +1,73 @@
 # Engineering Principles
 
-## 1. Product First
+---
 
-Technology exists to serve the product.
+## Purpose
 
-Never choose technology simply because it is popular.
+These principles guide every engineering decision made within Blackjack Mastery.
+
+Technology exists to support the product, not the other way around.
 
 ---
 
-## 2. Optimize for Maintainability
+# 1. Product First
 
-Prefer readability over cleverness.
+Every technical decision should improve the product.
 
-Code is read far more often than it is written.
-
----
-
-## 3. Domain Driven
-
-Organize the system around business concepts.
-
-Not frameworks.
+Avoid choosing technology based solely on trends.
 
 ---
 
-## 4. Small Pull Requests
+# 2. Simplicity Wins
 
-Small changes are easier to review.
-
----
-
-## 5. Test Behavior
-
-Test what the software does.
-
-Not how it is implemented.
+Prefer simple, maintainable solutions over clever ones.
 
 ---
 
-## 6. Documentation Matters
+# 3. Domain Driven
 
-Every significant architectural decision should be documented.
-
----
-
-## 7. Performance Matters
-
-Fast software feels better.
-
-Measure before optimizing.
+Organize software around business concepts rather than technical layers.
 
 ---
 
-## 8. Consistency Wins
+# 4. Readability
 
-Consistency is more valuable than personal preference.
+Code is read more often than it is written.
 
----
-
-## 9. User Experience First
-
-The product should feel effortless.
-
-If something is confusing, simplify it.
+Optimize for future maintainers.
 
 ---
 
-## 10. Build for Tomorrow
+# 5. Small Changes
 
-Don't overengineer.
+Favor small pull requests and incremental improvements.
 
-But don't paint ourselves into a corner.
+---
+
+# 6. Test Behavior
+
+Test business behavior rather than implementation details.
+
+---
+
+# 7. Documentation Matters
+
+Every important architectural decision should be documented.
+
+---
+
+# 8. Measure Before Optimizing
+
+Performance improvements should be driven by evidence.
+
+---
+
+# 9. Consistency
+
+Consistency is more valuable than individual preference.
+
+---
+
+# 10. Continuous Improvement
+
+Continuously refine the product, architecture, and engineering practices.

@@ -12,7 +12,7 @@
 | Version      | 0.1               |
 | Product      | Blackjack Mastery |
 | Owner        | Sean Mangosing    |
-| Last Updated | YYYY-MM-DD        |
+| Last Updated | 2026-07-04        |
 
 ---
 
@@ -20,17 +20,15 @@
 
 1. Vision Statement
 2. Mission
-3. Problem Statement
-4. Why Blackjack Mastery Exists
-5. Target Audience
-6. User Personas
-7. Product Principles
-8. Learning Philosophy
-9. Competitive Landscape
-10. Long-Term Product Vision
-11. Success Metrics
-12. Guiding Principles
-13. Roadmap Overview
+3. Why Blackjack Mastery Exists
+4. The Problem
+5. Our Solution
+6. Product Principles
+7. Learning Philosophy
+8. Target Audience
+9. Long-Term Vision
+10. Success Metrics
+11. What We Are Not
 
 ---
 
@@ -38,11 +36,13 @@
 
 > Become the world's best platform for learning blackjack.
 
-Blackjack Mastery exists to transform blackjack education from memorization into mastery through structured learning, adaptive practice, and measurable progress.
+Blackjack Mastery exists to transform blackjack education from memorization into mastery.
 
-We are not building a blackjack trainer.
+Our goal is not simply to help players make the correct decision. Our goal is to help them understand _why_ the decision is correct, retain that knowledge long-term, and develop confidence through structured practice.
 
-We are building a learning platform.
+We are building more than a blackjack trainer.
+
+We are building the definitive learning platform for blackjack.
 
 ---
 
@@ -50,183 +50,175 @@ We are building a learning platform.
 
 Our mission is to provide the fastest, most engaging, and most effective path from beginner to expert blackjack player.
 
-Players should not simply memorize charts.
+Learning blackjack should not require memorizing charts or reading books cover to cover. It should be interactive, measurable, and enjoyable.
 
-They should understand why every decision is correct and develop confidence through practice.
-
----
-
-# 3. Problem Statement
-
-Today's blackjack training tools suffer from several common issues:
-
-- Outdated user experiences
-- Limited explanations
-- Little or no progress tracking
-- Static practice
-- No adaptive learning
-- Memorization over understanding
-- No long-term learning path
-
-Most applications test knowledge rather than teach it.
-
-Blackjack Mastery aims to change that.
+Blackjack Mastery combines modern educational techniques, adaptive learning, and data-driven feedback to help players continuously improve.
 
 ---
 
-# 4. Why Blackjack Mastery Exists
+# 3. Why Blackjack Mastery Exists
 
-We believe learning blackjack should feel more like Duolingo than studying flashcards.
+Most blackjack training tools were designed to test knowledge.
 
-Players should enjoy learning.
+Very few were designed to teach.
 
-Progress should be visible.
+Many existing applications present random hands, tell the player whether they were correct, and immediately move on.
 
-Weaknesses should become opportunities.
+While technically useful, they rarely answer the most important questions:
 
-Every practice session should move the learner closer to mastery.
+- Why was this decision correct?
+- Which mistakes do I make most often?
+- What should I practice next?
+- Am I actually improving?
 
----
+Blackjack Mastery exists to answer those questions.
 
-# 5. Target Audience
-
-## Primary Audience
-
-- Casual blackjack players
-- Casino visitors
-- Cruise travelers
-- Hobbyists
-- Aspiring advantage players
-
-## Secondary Audience
-
-- Experienced card counters
-- Blackjack coaches
-- Gaming content creators
+Every practice session should leave the learner more knowledgeable and more confident than when they started.
 
 ---
 
-# 6. User Personas
+# 4. The Problem
 
-## Beginner
+Learning blackjack today is fragmented.
 
-Goals
+Players often rely on:
 
-- Learn basic strategy
-- Gain confidence
+- Printed strategy charts
+- Flashcards
+- YouTube videos
+- Casino practice
+- Outdated training software
 
-Challenges
+These methods are disconnected and rarely provide measurable progress.
 
-- Overwhelmed by charts
-- Doesn't understand why decisions are correct
+Most tools focus on memorization instead of understanding.
 
----
+Most do not adapt to the learner's weaknesses.
 
-## Intermediate
+Most cannot demonstrate long-term improvement.
 
-Goals
-
-- Improve speed
-- Reduce mistakes
-- Build consistency
-
-Challenges
-
-- Struggles with specific hands
-- Wants measurable progress
+As a result, players often plateau before reaching true mastery.
 
 ---
 
-## Advanced
+# 5. Our Solution
 
-Goals
+Blackjack Mastery combines proven educational techniques with modern software design.
 
-- Card counting
-- Casino simulations
-- Playing deviations
+The platform focuses on:
 
-Challenges
+- Structured lessons
+- Adaptive practice
+- Immediate explanations
+- Progress tracking
+- Skill-based learning
+- Personalized recommendations
 
-- Needs high-level practice
-- Wants realistic simulations
+Rather than simply asking random questions, the platform continuously identifies weaknesses and generates practice sessions specifically designed to improve those skills.
+
+Every interaction should move the learner closer to mastery.
 
 ---
 
-# 7. Product Principles
+# 6. Product Principles
 
-Every feature should support at least one of these principles.
+Every feature should reinforce at least one of these principles.
 
 ## Teach, Don't Test
 
-The application exists to educate.
+Every incorrect answer is an opportunity to teach.
 
-Not simply evaluate.
+Feedback should explain not only what was correct but why it was correct.
 
 ---
 
 ## Measure Progress
 
-Learning must be measurable.
+Learning should always be measurable.
 
-Users should always know what they have mastered.
+Users should understand what they have mastered, what still needs work, and what they should practice next.
 
 ---
 
 ## Adaptive Learning
 
-The application should automatically prioritize the player's weakest skills.
+Practice should become more personalized over time.
+
+The application should continuously adjust to the learner's strengths and weaknesses.
 
 ---
 
 ## Simplicity
 
-The interface should remove friction from learning.
+Learning should feel effortless.
+
+The interface should reduce cognitive load and allow users to focus on improving.
 
 ---
 
-## Professional Quality
+## Delight
 
-Everything should feel polished and intentional.
+The experience should be enjoyable enough that users want to return every day.
+
+Beautiful design, thoughtful animations, achievements, and clear progress all contribute to sustained engagement.
 
 ---
 
-# 8. Learning Philosophy
+# 7. Learning Philosophy
 
-Blackjack Mastery follows modern educational principles.
+Blackjack Mastery is built around modern learning science.
+
+Core techniques include:
 
 - Active Recall
 - Spaced Repetition
-- Adaptive Learning
+- Deliberate Practice
 - Immediate Feedback
 - Incremental Mastery
 - Habit Formation
 
-Learning should happen in short, focused sessions rather than marathon study sessions.
+Players should spend less time studying and more time practicing.
+
+The application should become a personal coach rather than a testing tool.
 
 ---
 
-# 9. Competitive Landscape
+# 8. Target Audience
 
-Current products include:
+## Primary Audience
 
-- Blackjack Apprenticeship
-- Casino Verite
-- Anki
-- Blackjack Strategy Trainers
+Players who want to become better blackjack players.
 
-Blackjack Mastery differentiates itself through:
+Examples include:
 
-- Modern UX
-- Adaptive learning
-- Rich explanations
-- Progress analytics
-- Long-term mastery
+- Casual casino visitors
+- Las Vegas travelers
+- Cruise ship players
+- Blackjack enthusiasts
+- Aspiring advantage players
 
 ---
 
-# 10. Long-Term Product Vision
+## Secondary Audience
 
-Blackjack Mastery evolves through academies.
+More advanced users who want to refine specific skills.
+
+Examples include:
+
+- Card counters
+- Blackjack coaches
+- Gaming content creators
+- Advantage play communities
+
+---
+
+# 9. Long-Term Vision
+
+Blackjack Mastery is designed as a platform rather than a single application.
+
+The long-term roadmap includes specialized academies for every major blackjack discipline.
+
+Potential academies include:
 
 - Basic Strategy Academy
 - Card Counting Academy
@@ -234,74 +226,49 @@ Blackjack Mastery evolves through academies.
 - Playing Deviations Academy
 - Blackjack Switch Academy
 - Free Bet Academy
-- Casino Simulation Academy
 - Bankroll Management Academy
+- Casino Simulation Academy
 
-Eventually the platform becomes the definitive educational product for blackjack.
+Over time, Blackjack Mastery should become the definitive destination for anyone serious about learning blackjack.
 
 ---
 
-# 11. Success Metrics
+# 10. Success Metrics
 
-Business
+We measure success in two ways.
 
-- DAU
-- WAU
-- Retention
+## Product Success
+
+- Daily Active Users
+- Weekly Active Users
+- User Retention
+- Practice Sessions Completed
+- Lesson Completion Rate
 - Subscription Conversion
 
-Learning
+## Learning Success
 
 - Strategy Accuracy
-- Card Counting Accuracy
 - Response Time
+- Skill Mastery
 - Long-Term Retention
-- Mastery Percentage
+- Practice Consistency
+- Improvement Over Time
+
+If users become better blackjack players, the product is succeeding.
 
 ---
 
-# 12. Guiding Principles
+# 11. What We Are Not
 
-When making product decisions we ask:
+Blackjack Mastery is not:
 
-1. Does this make users better blackjack players?
+- A gambling platform
+- A casino game
+- A blackjack simulator focused on entertainment
+- A collection of static strategy charts
+- A flashcard application
 
-2. Does this improve learning?
+Our purpose is education.
 
-3. Does this simplify the experience?
-
-4. Can we measure its effectiveness?
-
-If the answer is no, we should reconsider the feature.
-
----
-
-# 13. Roadmap Overview
-
-Phase 1
-
-Basic Strategy Academy
-
-Phase 2
-
-Adaptive Learning
-
-Phase 3
-
-Card Counting Academy
-
-Phase 4
-
-Casino Simulation
-
-Phase 5
-
-AI Coach
-
-Phase 6
-
-Mobile Applications
-
-Phase 7
-
-Community & Challenges
+Every feature should make users better blackjack players through structured, measurable, and engaging learning.

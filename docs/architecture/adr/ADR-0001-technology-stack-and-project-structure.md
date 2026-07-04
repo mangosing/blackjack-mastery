@@ -1,25 +1,95 @@
+# ADR-0001: Technology Stack and Project Structure
+
+## Status
+
+Accepted
+
+---
+
+## Context
+
+Blackjack Mastery is intended to grow from a single educational application into a comprehensive learning platform.
+
+The technology stack should optimize for maintainability, developer experience, scalability, and future expansion.
+
+---
+
 ## Decision
 
-We will use a monorepo containing:
+The project will use:
 
-- apps/web (Next.js)
-- apps/api (NestJS)
-- packages/ (shared code)
-- docs/ (product and architecture documentation)
+- Monorepo
+- Next.js (Frontend)
+- NestJS (Backend)
+- TypeScript
+- PostgreSQL (Supabase)
+- Prisma ORM
+- Linear for project management
+- GitHub for source control
+
+---
 
 ## Alternatives Considered
 
 ### Polyrepo
 
-Pros:
+Pros
 
-- Independent deployments
+- Independent repositories
 
-Cons:
+Cons
 
-- More repositories to manage
-- Harder to share code
-- More CI/CD complexity
+- Increased complexity
+- Harder code sharing
+- Additional CI/CD overhead
 
-Decision:
+Decision
+
 Rejected for MVP.
+
+---
+
+### Python Backend
+
+Pros
+
+- Excellent AI ecosystem
+
+Cons
+
+- Two-language stack
+- Increased complexity
+
+Decision
+
+Deferred.
+
+Future AI services may be implemented in Python while the primary application remains TypeScript.
+
+---
+
+## Consequences
+
+### Positive
+
+- Single language across frontend and backend
+- Excellent developer experience
+- Shared tooling
+- Easier onboarding
+- Scalable architecture
+
+### Negative
+
+- AI services may eventually require a secondary technology stack.
+
+---
+
+## Future Considerations
+
+Future ADRs will document:
+
+- Authentication
+- AI services
+- Mobile applications
+- Event architecture
+- Caching

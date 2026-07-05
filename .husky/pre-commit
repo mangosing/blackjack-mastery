@@ -1,3 +1,2 @@
 #!/usr/bin/env sh
-
-# Configured in BLA-17 when lint-staged is introduced.
+pnpm lint-staged

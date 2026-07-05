@@ -1,0 +1,44 @@
+# ------------------------------------------------------------------------------
+# Blackjack Master CODEOWNERS
+#
+# This file defines the default code ownership for the repository.
+# As the engineering team grows, ownership can be delegated to feature teams
+# while retaining repository-wide review requirements.
+# ------------------------------------------------------------------------------
+
+# Default owner
+* @seanmangosing
+
+# ------------------------------------------------------------------------------
+# Applications
+# ------------------------------------------------------------------------------
+
+/apps/api/ @seanmangosing
+/apps/web/ @seanmangosing
+
+# ------------------------------------------------------------------------------
+# Shared Packages
+# ------------------------------------------------------------------------------
+
+/packages/ @seanmangosing
+
+# ------------------------------------------------------------------------------
+# Documentation
+# ------------------------------------------------------------------------------
+
+/docs/ @seanmangosing
+README.md @seanmangosing
+
+# ------------------------------------------------------------------------------
+# Infrastructure
+# ------------------------------------------------------------------------------
+
+/.github/ @seanmangosing
+
+# ------------------------------------------------------------------------------
+# Configuration
+# ------------------------------------------------------------------------------
+
+package.json @seanmangosing
+pnpm-lock.yaml @seanmangosing
+turbo.json @seanmangosing

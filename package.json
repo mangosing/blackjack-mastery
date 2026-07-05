@@ -12,13 +12,15 @@
     "format": "turbo format",
     "clean": "turbo clean",
     "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build",
-    "format:check": "turbo format:check"
+    "format:check": "turbo format:check",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.20.0",
   "devDependencies": {
+    "husky": "^9.1.7",
     "prettier": "^3.9.4",
     "turbo": "^2.10.3"
   }

@@ -16,32 +16,35 @@
 
 ---
 
-# Purpose
+## Purpose
 
-This document defines the core business concepts used throughout Blackjack Mastery.
+This document defines the core business concepts used throughout Blackjack
+Mastery.
 
 It is not a database schema, API contract, or implementation plan.
 
-The goal is to establish a shared language for the product, design, engineering, and future AI-assisted development.
+The goal is to establish a shared language for the product, design, engineering,
+and future AI-assisted development.
 
 ---
 
-# Core Concept
+## Core Concept
 
 Blackjack Mastery is built around one central idea:
 
-> Users do not simply answer blackjack questions.  
+> Users do not simply answer blackjack questions.
 > Users develop mastery over specific blackjack skills.
 
 A practice session is not just a collection of random hands.
 
-A practice session is a targeted learning experience designed to improve measurable skills.
+A practice session is a targeted learning experience designed to improve
+measurable skills.
 
 ---
 
-# Domain Principles
+## Domain Principles
 
-## 1. Skills Are the Atomic Unit of Learning
+### 1. Skills Are the Atomic Unit of Learning
 
 The smallest measurable learning unit is a Skill.
 
@@ -55,7 +58,7 @@ Examples:
 
 ---
 
-## 2. Practice Serves Mastery
+### 2. Practice Serves Mastery
 
 Practice exists to improve mastery.
 
@@ -63,34 +66,37 @@ Every practice session should be connected to one or more skills.
 
 ---
 
-## 3. Feedback Must Teach
+### 3. Feedback Must Teach
 
-Feedback should explain the correct decision and reinforce why the decision is correct.
-
----
-
-## 4. Progress Must Be Measurable
-
-Users should be able to see their progress by academy, lesson, skill, and practice history.
+Feedback should explain the correct decision and reinforce why the decision is
+correct.
 
 ---
 
-# Domain Objects
+### 4. Progress Must Be Measurable
 
-## User
+Users should be able to see their progress by academy, lesson, skill, and
+practice history.
+
+---
+
+## Domain Objects
+
+### User
 
 A person using Blackjack Mastery.
 
-A User may study lessons, complete practice sessions, build mastery, earn achievements, and receive recommendations.
+A User may study lessons, complete practice sessions, build mastery, earn
+achievements, and receive recommendations.
 
-### Key Responsibilities
+#### User Key Responsibilities
 
 - Owns progress
 - Owns practice history
 - Owns mastery records
 - Owns streaks and achievements
 
-### Example Properties
+#### User Example Properties
 
 - id
 - email
@@ -100,7 +106,7 @@ A User may study lessons, complete practice sessions, build mastery, earn achiev
 
 ---
 
-## Academy
+### Academy
 
 A high-level learning area within Blackjack Mastery.
 
@@ -114,7 +120,7 @@ Examples:
 - Free Bet Academy
 - Casino Simulation Academy
 
-### Key Responsibilities
+#### Academy Key Responsibilities
 
 - Groups related courses and lessons
 - Provides a structured learning path
@@ -122,7 +128,7 @@ Examples:
 
 ---
 
-## Course
+### Course
 
 A structured sequence of lessons inside an Academy.
 
@@ -136,7 +142,7 @@ Basic Strategy Academy may contain:
 - Surrender Course
 - Mixed Strategy Course
 
-### Key Responsibilities
+#### Course Key Responsibilities
 
 - Organizes lessons
 - Defines progression order
@@ -144,7 +150,7 @@ Basic Strategy Academy may contain:
 
 ---
 
-## Lesson
+### Lesson
 
 A guided learning experience that introduces or reinforces a concept.
 
@@ -155,7 +161,7 @@ Examples:
 - Splitting pairs
 - Late surrender basics
 
-### Key Responsibilities
+#### Lesson Key Responsibilities
 
 - Teaches a concept
 - Introduces related skills
@@ -164,7 +170,7 @@ Examples:
 
 ---
 
-## Skill
+### Skill
 
 The smallest measurable competency in the system.
 
@@ -179,14 +185,14 @@ Examples:
 - Running count card values
 - True count conversion with 2 decks remaining
 
-### Key Responsibilities
+#### Skill Key Responsibilities
 
 - Represents one measurable ability
 - Can be practiced repeatedly
 - Has mastery progress
 - Can belong to one or more lessons
 
-### Example Properties
+#### Skill Example Properties
 
 - id
 - name
@@ -199,21 +205,22 @@ Examples:
 
 ---
 
-## Rule Set
+### Rule Set
 
 A specific blackjack rules configuration.
 
 Example:
 
-6-deck, dealer hits soft 17, double after split allowed, late surrender available.
+6-deck, dealer hits soft 17, double after split allowed, late surrender
+available.
 
-### Key Responsibilities
+#### Rule Set Key Responsibilities
 
 - Defines the rules used to evaluate decisions
 - Affects correct strategy
 - Allows future support for multiple blackjack variants
 
-### Example Properties
+#### Rule Set Example Properties
 
 - id
 - name
@@ -226,7 +233,7 @@ Example:
 
 ---
 
-## Hand Scenario
+### Hand Scenario
 
 A blackjack situation presented to the user.
 
@@ -236,13 +243,13 @@ Examples:
 - Player: A,7, Dealer: 9
 - Player: 8,8, Dealer: Ace
 
-### Key Responsibilities
+#### Hand Scenario Key Responsibilities
 
 - Represents the situation being practiced
 - Connects to one or more skills
 - Is evaluated under a specific rule set
 
-### Example Properties
+#### Hand Scenario Example Properties
 
 - id
 - playerHand
@@ -253,7 +260,7 @@ Examples:
 
 ---
 
-## Decision
+### Decision
 
 An action chosen by the user or defined as correct strategy.
 
@@ -273,7 +280,7 @@ Future modules may add decisions such as:
 - Free Double
 - Free Split
 
-### Key Responsibilities
+#### Decision Key Responsibilities
 
 - Represents an available action
 - Supports evaluation
@@ -281,7 +288,7 @@ Future modules may add decisions such as:
 
 ---
 
-## Practice Session
+### Practice Session
 
 A focused training session containing one or more hand scenarios or drills.
 
@@ -293,7 +300,7 @@ Examples:
 - Timed basic strategy drill
 - Running count drill
 
-### Key Responsibilities
+#### Practice Session Key Responsibilities
 
 - Presents questions or drills
 - Captures user answers
@@ -301,7 +308,7 @@ Examples:
 - Produces session results
 - Updates mastery
 
-### Example Properties
+#### Practice Session Example Properties
 
 - id
 - userId
@@ -314,7 +321,7 @@ Examples:
 
 ---
 
-## Question
+### Question
 
 A single prompt shown during a practice session.
 
@@ -324,7 +331,7 @@ Examples:
 - What is the running count after these cards?
 - What is the true count with +8 running count and 4 decks remaining?
 
-### Key Responsibilities
+#### Question Key Responsibilities
 
 - Presents a user-facing challenge
 - Records the expected answer
@@ -333,18 +340,18 @@ Examples:
 
 ---
 
-## Answer Attempt
+### Answer Attempt
 
 A user's response to a question.
 
-### Key Responsibilities
+#### Answer Attempt Key Responsibilities
 
 - Stores what the user selected
 - Stores whether the answer was correct
 - Stores response time
 - Feeds mastery calculations
 
-### Example Properties
+#### Answer Attempt Example Properties
 
 - id
 - userId
@@ -357,16 +364,18 @@ A user's response to a question.
 
 ---
 
-## Explanation
+### Explanation
 
 A teaching response shown after a question.
 
 Examples:
 
 - “Hard 16 vs dealer 10 is a hit because standing loses more often over time.”
-- “Always split 8s because 16 is a weak total and two 8s give you two chances to improve.”
+- “Always split 8s because 16 is a weak total and two 8s give you two chances to
 
-### Key Responsibilities
+  improve.”
+
+#### Explanation Key Responsibilities
 
 - Teaches why an answer is correct
 - Reinforces strategy patterns
@@ -374,7 +383,7 @@ Examples:
 
 ---
 
-## Mastery
+### Mastery
 
 A measure of how well a user understands a skill.
 
@@ -386,14 +395,14 @@ Mastery is tracked at multiple levels:
 - Academy mastery
 - Overall mastery
 
-### Key Responsibilities
+#### Mastery Key Responsibilities
 
 - Tracks progress over time
 - Drives recommendations
 - Determines unlocks and achievements
 - Identifies weak skills
 
-### Example Factors
+#### Mastery Example Factors
 
 - Accuracy
 - Recent performance
@@ -404,7 +413,7 @@ Mastery is tracked at multiple levels:
 
 ---
 
-## Recommendation
+### Recommendation
 
 A suggested next action for the user.
 
@@ -416,7 +425,7 @@ Examples:
 - Repeat weak skill review
 - Complete today’s daily practice
 
-### Key Responsibilities
+#### Recommendation Key Responsibilities
 
 - Guides the user toward improvement
 - Uses mastery and practice history
@@ -424,7 +433,7 @@ Examples:
 
 ---
 
-## Achievement
+### Achievement
 
 A milestone earned by the user.
 
@@ -436,7 +445,7 @@ Examples:
 - Master all pair splits
 - Complete Basic Strategy Academy
 
-### Key Responsibilities
+#### Achievement Key Responsibilities
 
 - Rewards progress
 - Encourages continued use
@@ -444,11 +453,11 @@ Examples:
 
 ---
 
-## Streak
+### Streak
 
 A measure of consistent practice behavior.
 
-### Key Responsibilities
+#### Streak Key Responsibilities
 
 - Encourages habit formation
 - Tracks consecutive active days
@@ -456,7 +465,7 @@ A measure of consistent practice behavior.
 
 ---
 
-## Challenge
+### Challenge
 
 A structured goal or test.
 
@@ -467,7 +476,7 @@ Examples:
 - Finish a daily challenge
 - Pass a Basic Strategy final exam
 
-### Key Responsibilities
+#### Challenge Key Responsibilities
 
 - Creates focused goals
 - Measures readiness
@@ -475,9 +484,9 @@ Examples:
 
 ---
 
-# Domain Relationships
+## Domain Relationships
 
-## High-Level Relationship
+### High-Level Relationship
 
 ```text
 User
@@ -498,7 +507,7 @@ Skills
 
 ---
 
-## Learning Flow
+### Learning Flow
 
 ```text
 Academy
@@ -515,7 +524,92 @@ Academy
 
 ---
 
-# Example: Basic Strategy Flow
+## Ownership Boundaries
+
+Blackjack Mastery separates authentication, application data, and business logic
+into distinct ownership layers.
+
+### Supabase
+
+Supabase owns authentication identity.
+
+#### Supabase Responsibilities
+
+- User authentication
+- Email verification
+- Password management
+- OAuth providers
+- Session management
+- JWT issuance
+
+#### Supabase Source of Truth
+
+- Authentication identity
+- Email address
+- Authentication provider
+- Session tokens
+
+---
+
+### Prisma
+
+Prisma owns Blackjack Mastery application data.
+
+#### Prisma Responsibilities
+
+- User profile
+- Preferences
+- Practice history
+- Mastery records
+- Statistics
+- Achievements
+- Recommendations
+
+#### Prisma Source of Truth
+
+- User profile
+- Learning progress
+- Practice sessions
+- Domain data
+
+---
+
+### Application Code
+
+Application code owns Blackjack Mastery business logic.
+
+#### Application Code Responsibilities
+
+- Blackjack rules
+- Hand evaluation
+- Strategy evaluation
+- Mastery calculation
+- Recommendation logic
+- Analytics calculations
+- Learning workflows
+
+Business rules should not live in the database or authentication provider.
+
+---
+
+### Ownership Source of Truth
+
+| Data                  | Owner            |
+| --------------------- | ---------------- |
+| Authentication        | Supabase         |
+| Email Verification    | Supabase         |
+| Session Tokens        | Supabase         |
+| User Profile          | Prisma           |
+| Preferences           | Prisma           |
+| Practice Sessions     | Prisma           |
+| Mastery               | Prisma           |
+| Blackjack Rules       | Application Code |
+| Strategy Engine       | Application Code |
+| Recommendation Engine | Application Code |
+
+---
+
+## Example: Basic Strategy Flow
 
 1. User enters Basic Strategy Academy.
 2. User starts Hard Totals Course.
@@ -531,7 +625,7 @@ Academy
 
 ---
 
-# Example: Card Counting Flow
+## Example: Card Counting Flow
 
 1. User enters Card Counting Academy.
 2. User studies Hi-Lo card values.
@@ -544,10 +638,16 @@ Academy
 
 ---
 
-# Open Questions
+## Open Questions
 
-- Should Academy and Course both exist in MVP, or should Course be introduced later?
-- Should Mastery be calculated immediately in MVP or introduced after basic progress tracking?
+- Should Academy and Course both exist in MVP, or should Course be introduced
+
+  later?
+
+- Should Mastery be calculated immediately in MVP or introduced after basic
+
+  progress tracking?
+
 - Should Hand Scenario and Skill be separate entities or combined initially?
 - Should recommendations be rules-based before becoming adaptive?
 - Should achievements be included in MVP or added after user accounts?
@@ -555,8 +655,9 @@ Academy
 
 ---
 
-# Notes
+## Notes
 
 This document intentionally avoids database-specific details.
 
-Database schema, API contracts, and application architecture should be derived from this domain model after the core language is stable.
+Database schema, API contracts, and application architecture should be derived
+from this domain model after the core language is stable.

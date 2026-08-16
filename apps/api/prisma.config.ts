@@ -5,8 +5,22 @@ import { defineConfig, env } from 'prisma/config';
 
 export default defineConfig({
   schema: 'prisma/schema.prisma',
+  experimental: {
+    externalTables: true,
+  },
+  tables: {
+    external: ['auth.users'],
+  },
   migrations: {
     path: 'prisma/migrations',
+    initShadowDb: `
+      CREATE SCHEMA IF NOT EXISTS auth;
+
+      CREATE TABLE IF NOT EXISTS auth.users (
+        id UUID PRIMARY KEY,
+        raw_user_meta_data JSONB
+      );
+    `,
   },
   datasource: {
     url: env('DIRECT_URL'),

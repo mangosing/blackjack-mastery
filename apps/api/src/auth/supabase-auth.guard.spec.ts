@@ -13,11 +13,17 @@ describe('SupabaseAuthGuard', () => {
     verifyAccessToken: jest.fn(),
   };
 
+  const reflector = {
+    getAllAndOverride: jest.fn(),
+  };
+
   let guard: SupabaseAuthGuard;
 
   beforeEach(() => {
     jest.clearAllMocks();
-    guard = new SupabaseAuthGuard(authService as never);
+    reflector.getAllAndOverride.mockReturnValue(false);
+
+    guard = new SupabaseAuthGuard(authService as never, reflector as never);
   });
 
   function createContext(authorization?: string) {
@@ -35,16 +41,28 @@ describe('SupabaseAuthGuard', () => {
     }
 
     const context = {
+      getHandler: jest.fn(),
+      getClass: jest.fn(),
       switchToHttp: () => ({
         getRequest: () => request,
       }),
-    } as ExecutionContext;
+    } as unknown as ExecutionContext;
 
     return {
       context,
       request,
     };
   }
+
+  it('allows a route marked as public', async () => {
+    reflector.getAllAndOverride.mockReturnValue(true);
+
+    const { context } = createContext();
+
+    await expect(guard.canActivate(context)).resolves.toBe(true);
+
+    expect(authService.verifyAccessToken).not.toHaveBeenCalled();
+  });
 
   it('rejects a request without an authorization header', async () => {
     const { context } = createContext();

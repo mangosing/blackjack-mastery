@@ -1,9 +1,12 @@
 import type { Server } from 'node:http';
 
-import { type INestApplication } from '@nestjs/common';
+import type { INestApplication } from '@nestjs/common';
+import { APP_GUARD } from '@nestjs/core';
 import { Test } from '@nestjs/testing';
 import request from 'supertest';
 
+import { AppController } from '../app.controller';
+import { AppService } from '../app.service';
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
 import { SupabaseAuthGuard } from './supabase-auth.guard';
@@ -23,9 +26,14 @@ describe('AuthController', () => {
 
   beforeAll(async () => {
     const module = await Test.createTestingModule({
-      controllers: [AuthController],
+      controllers: [AppController, AuthController],
       providers: [
+        AppService,
         SupabaseAuthGuard,
+        {
+          provide: APP_GUARD,
+          useExisting: SupabaseAuthGuard,
+        },
         {
           provide: AuthService,
           useValue: authService,
@@ -45,6 +53,12 @@ describe('AuthController', () => {
 
   afterAll(async () => {
     await app.close();
+  });
+
+  it('allows access to a public route without a token', async () => {
+    await request(server).get('/').expect(200).expect('Hello World!');
+
+    expect(authService.verifyAccessToken).not.toHaveBeenCalled();
   });
 
   it('returns the authenticated user', async () => {

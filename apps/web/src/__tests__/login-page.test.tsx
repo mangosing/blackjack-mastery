@@ -15,11 +15,11 @@ vi.mock("next/navigation", () => ({
 }));
 
 vi.mock("../lib/supabase/client", () => ({
-  supabase: {
+  getSupabaseClient: () => ({
     auth: {
       signInWithPassword: mockSignInWithPassword,
     },
-  },
+  }),
 }));
 
 describe("Login page", () => {

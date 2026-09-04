@@ -1,7 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState, type FormEvent } from "react";
+import { useState, type SubmitEvent } from "react";
 import { getSupabaseClient } from "../../lib/supabase/client";
 
 export default function LoginPage() {
@@ -9,7 +10,7 @@ export default function LoginPage() {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault();
 
     setErrorMessage(null);
@@ -71,6 +72,12 @@ export default function LoginPage() {
               required
               className="mt-2 w-full rounded-md border px-3 py-2"
             />
+          </div>
+
+          <div className="text-right">
+            <Link href="/forgot-password" className="text-sm underline">
+              Forgot password?
+            </Link>
           </div>
 
           {errorMessage ? (

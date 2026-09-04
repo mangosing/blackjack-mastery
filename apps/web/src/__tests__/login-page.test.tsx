@@ -56,6 +56,11 @@ describe("Login page", () => {
   it("renders the login form", () => {
     render(<LoginPage />);
 
+    expect(screen.getByRole("link", { name: "Forgot password?" })).toHaveAttribute(
+      "href",
+      "/forgot-password",
+    );
+
     expect(
       screen.getByRole("heading", { name: "Log in to Blackjack Mastery" }),
     ).toBeInTheDocument();
